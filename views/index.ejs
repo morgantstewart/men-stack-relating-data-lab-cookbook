@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
+   <%- include('./partials/_navbar.ejs') %>
 </head>
 <body>
   <body>
-  <%- include('./partials/_navbar.ejs') %>
   <% if (user) { %>
     <h1>Welcome to Cookbook, <%= user.username %>!</h1>
     <p>
       <a href="/auth/sign-out">Sign out</a>
     </p>
   <% } else { %>
-    <h1>Welcome to Cookbook, guest.</h1>
+    <h1>Welcome to Cookbook, .</h1>
     <p>
       <a href="/auth/sign-up">Sign up</a> or
       <a href="/auth/sign-in">Sign in</a>.

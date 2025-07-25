@@ -53,6 +53,16 @@ app.use('/users/:userId/foods', foodsController);
 
 
 
+app.get("/foods/:foodId/edit", async (req, res) => {
+  const foundFood = await Food.findById(req.params.foodId);
+  res.render("foods/edit.ejs", {
+    food: foundFood,
+  });
+});
+
+
+
+
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
