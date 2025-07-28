@@ -2,12 +2,32 @@ const mongoose = require('mongoose');
 
 
 
+// const foodSchema = new mongoose.Schema({
+//   name: {
+//     type: String,
+//     required: true,
+//   }
+// })
+
+
+
 const foodSchema = new mongoose.Schema({
-  name: {
+  Name: {
     type: String,
     required: true,
-  }
-})
+  }, 
+
+  Instructions: {
+    type: String,
+    required: true,
+  },
+
+  Ingredients: {
+    type: String,
+  },
+  
+});
+
 
 const userSchema = new mongoose.Schema({
   username: {
