@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const morgan = require('morgan');
 const session = require('express-session');
 
+// .js
 
 
 const isSignedIn = require('./middleware/is-signed-in.js');
