@@ -12,8 +12,8 @@ router.get('/', (req, res) => {
 });
 
 
-router.get('../users/:userId/foods/new', (req, res) => {
-  res.render('new.ejs');
+router.get('/new', async (req, res) => {
+  res.render('foods/new.ejs');
 });
 
 
